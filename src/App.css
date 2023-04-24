@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Minesweeper {
+  width: 100%;
+}
+
+.Header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.header-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-option {
+  display: flex;
+  align-items: center;
+}
+
+.header-img {
+  width: 2rem;
+  padding-right: 1rem;
+}
+
+.replay-button {
+  width: 2rem;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.Minefield {
+  background-color: brown;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  height: 70vh;
+}
+
+.Cell {
+  background-color: rgb(58, 58, 58);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.uncovered {
+  background-color: gray !important;
+}
+
+.mine-png {
+  width: 2rem;
+}
+
+.flag-png {
+  width: 2rem;
 }
