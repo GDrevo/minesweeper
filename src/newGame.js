@@ -1,7 +1,7 @@
 export default function newGame() {
   const grid = []
   const mines = new Set();
-  while (mines.size < 10) {
+  while (mines.size < 15) {
     mines.add(Math.floor(Math.random() * 100));
   }
   for (let i = 0; i < 100; i++) {
