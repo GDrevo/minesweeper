@@ -10,7 +10,7 @@ export default function Minesweeper() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [board, setBoard] = useState([])
   const intervalRef = useRef(null)
-  const [mode, setMode] = useState('win')
+  const [mode, setMode] = useState('game')
   const [score, setScore] = useState(0)
   const [finalChrono, setFinalChrono] = useState(0)
 
@@ -45,7 +45,7 @@ export default function Minesweeper() {
     const isComplete = flag.length === mines.length
     if (allFlagged && isComplete) {
       const time = chrono
-      const score = Math.round(100000 / time)
+      const score = Math.round(10000000 / (time * time))
       setScore(score)
       setFinalChrono(time)
       setIsPlaying(false)
